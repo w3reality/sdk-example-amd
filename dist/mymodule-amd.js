@@ -4,7 +4,10 @@ define((require, exports, module) => {
     class MyModule {
         constructor() {
             const geometry = new THREE.BoxGeometry(1, 1, 1);
-            const material = new THREE.MeshBasicMaterial({color: 0xcc00cc});
+            const material = new THREE.MeshBasicMaterial({
+                color: 0xcc00cc,
+                wireframe: true,
+            });
             const cube = new THREE.Mesh(geometry, material);
             cube.position.set(0, 1, 7);
             const scene = new THREE.Scene();
